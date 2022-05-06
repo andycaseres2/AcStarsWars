@@ -20,7 +20,12 @@ export const FilmsList = (film) => {
               {!images ? (
                 <div>Cargando...</div>
               ) : (
-                images.map((img) => <Imgfilms key={img.title} {...img} />)
+                images.map(
+                  (img) =>
+                    img.id === film.episode_id && (
+                      <Imgfilms key={img.title} {...img} />
+                    )
+                )
               )}
             </div>
             <strong>{film.title}</strong>
