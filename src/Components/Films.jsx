@@ -11,9 +11,11 @@ export const Films = () => {
     API.getAllFilms().then(setFilms).catch(console.error);
   }, []);
 
+  films.sort((a, b) => (a.episode_id > b.episode_id ? 1 : -1));
+
   return (
     <div className="films">
-      {!films.length === 0 ? (
+      {films.length === 0 ? (
         <Spinner color="red.500" size="xxl" />
       ) : (
         <section>

@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 export const FilmsList = (film) => {
   return (
     <>
-      <Link to={`/${film.episode_id}`}>
+      <Link to={`/films/${film.episode_id}`}>
         <Box
-          bg="#1A365D"
+          bg="#062e4e"
           w="280px"
           p={4}
           m={4}
